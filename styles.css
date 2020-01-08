@@ -1,0 +1,134 @@
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #08e1ae;
+    background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Instructions section */
+.instructions {
+    display: inline-block;
+    width: 400px;
+    margin-right: 100px;
+
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.instructions h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+.instructions ol {
+    font-size: 1.2em;
+}
+
+.container {
+    display: inline-block;
+}
+
+.game-board {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    border: 8px solid black;
+}
+
+.row {
+    height: calc(100% / 9);
+    width: 100%;
+
+    display: flex;
+}
+
+.cell {
+    height: 100%;
+    flex: 1 0 20px;
+    border: 1px solid black;
+    cursor: pointer;
+
+    padding-top: 2px;
+    padding-left: 6px;
+
+    font-size: 1.1em;
+    color: Gray;
+
+    font-weight: 700;
+}
+
+.cell.filled {
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5em;
+    color: black;
+}
+
+.cell.success {
+    animation: success 1s ease-in;
+}
+
+@keyframes success {
+    0% {
+        background-color: SpringGreen;
+    }
+    100% {
+        background-color: rgba(255, 255, 0, 0.3);
+    }
+}
+
+.cell.failure {
+    animation: failure 1s ease-in;
+}
+
+@keyframes failure {
+    0% {
+        background-color: tomato;
+    }
+    100% {
+        background-color: rgba(255, 255, 0, 0.3);
+    }
+}
+
+.cell.filled.bot {
+    background-color: DarkTurquoise;
+}
+
+.cell.active {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
+/* TakeAway: How to create 3*3 boxes */
+.cell:nth-child(3n + 3) {
+    border-right: 5px solid black;
+}
+.cell:last-child {
+    border: 1px solid black;
+}
+.row:nth-child(3n + 3) {
+    border-bottom: 5px solid black;
+}
+.row:last-child {
+    border-bottom: none;
+}

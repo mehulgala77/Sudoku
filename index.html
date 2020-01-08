@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sudoku</title>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <div class="instructions">
+        <h2>Instructions for the Game!</h2>
+        <ol>
+            <li>Press an empty Square and enter a number.</li>
+            <li>The number will be entered as a PROBABLE.</li>
+            <li>To confirm the number and add it permanently select it and <strong>PRESS ENTER.</strong></li>
+            <li>If the number was at a valid position, the number will become part of the board.</li>
+            <li>If the number was invalid, the number will be erased.</li>
+            <li>Only <strong>three negative</strong> entries are allowed. The game will be over after that.</li>
+        </ol>
+    </div>
+    <div class="container">
+        <div class="game-board">
+            <div class="row" data-row="0">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="1">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="2">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="3">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="4">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="5">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="6">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="7">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+            <div class="row" data-row="8">
+                <div class="cell" data-col="0"></div>
+                <div class="cell" data-col="1"></div>
+                <div class="cell" data-col="2"></div>
+                <div class="cell" data-col="3"></div>
+                <div class="cell" data-col="4"></div>
+                <div class="cell" data-col="5"></div>
+                <div class="cell" data-col="6"></div>
+                <div class="cell" data-col="7"></div>
+                <div class="cell" data-col="8"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
