@@ -35,7 +35,8 @@ function keyPressed(event) {
     if (event.key == "Enter") {
 
         if(activeCell.text() !== "") {
-
+            
+            // TakeAway: Effective use of data attributes.
             let col = activeCell.data("col");
             let row = activeCell.parent().data("row");
             
@@ -43,7 +44,8 @@ function keyPressed(event) {
 
                 activeCell.addClass("filled");
                 grid[row][col] = activeCell.text();
-
+                
+                // TakeAway: Apply transient animations
                 activeCell.addClass("success");
                 activeCell.one("animationend", function(){
                     activeCell.removeClass("success");
@@ -93,6 +95,7 @@ function fillEmptySpot(board) {
 
     while(true) {
 
+        // TakeAway: Generate the game randomly.
         row = Math.floor(Math.random() * 9);
         col = Math.floor(Math.random() * 9);
         num = Math.ceil(Math.random() * 9);
