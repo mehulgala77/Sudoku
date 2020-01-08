@@ -28,6 +28,10 @@ function keyPressed(event) {
 
     let activeCell = $(".cell.active");
 
+    // Unprocessed events.
+    if (activeCell == undefined) return;
+    if (activeCell.hasClass("bot")) return;
+
     if (event.key >= 0 && event.key <= 9) {
         activeCell.text(event.key);
     }
